@@ -12,5 +12,7 @@
   "devDependencies": {
     "concurrently": "^8.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "install-all": "^1.1.0"
+  }
 }
