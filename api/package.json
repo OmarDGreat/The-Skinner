@@ -9,10 +9,6 @@
     "dev": "nodemon index.js",
     "build": "npm install"
   },
-  "engines": {
-    "node": ">=14.x",
-    "npm": ">=6.x"
-  },
   "dependencies": {
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
@@ -27,15 +23,8 @@
   "devDependencies": {
     "nodemon": "^2.0.22"
   },
-  "keywords": ["steam", "backend", "express", "authentication", "sessions", "mongodb"],
-  "author": "Your Name <your.email@example.com>",
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/your-username/the-skinner.git"
-  },
-  "bugs": {
-    "url": "https://github.com/your-username/the-skinner/issues"
-  },
-  "homepage": "https://github.com/your-username/the-skinner#readme"
+  "engines": {
+    "node": ">=14.x",
+    "npm": ">=6.x"
+  }
 }
