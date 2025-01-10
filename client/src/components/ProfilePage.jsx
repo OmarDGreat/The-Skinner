@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from "react";
-import Profile from "./Profile";
+import React, { useState, useEffect } from "react"; 
 
 const ProfilePage = () => {
   const [user, setUser] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch profile data from the backend
-    fetch('http://localhost:5000/api/profile', {
+    // Use import.meta.env for environment variables in Vite
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
+
+    fetch(`${apiBaseUrl}/api/profile`, {
       method: 'GET',
       credentials: 'include',
-    })  
+    })
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch profile data");
