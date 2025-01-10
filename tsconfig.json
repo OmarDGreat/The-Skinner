@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx", // Enable JSX for React
+    "target": "ESNext", // Ensure modern syntax support
+    "module": "ESNext", // Use modern module resolution
+    "strict": true, // Enable strict type-checking
+    "moduleResolution": "node", // Use Node.js-style resolution
+    "allowJs": true, // Allow JavaScript files
+    "baseUrl": "./", // Set base URL for imports
+    "paths": {
+      "*": ["src/*"] // Optional: Set up path aliases if needed
+    }
+  },
+  "include": ["src/**/*"], // Include all files in the src directory
+  "exclude": ["node_modules"] // Exclude dependencies
+}

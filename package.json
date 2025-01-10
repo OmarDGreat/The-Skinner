@@ -1,0 +1,16 @@
+{
+  "name": "the-skinner",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A project for viewing and managing Steam skins and inventory",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix client\" \"npm run dev --prefix server\"",
+    "start": "npm run start --prefix server",
+    "build": "npm run build --prefix client",
+    "install-all": "npm install --prefix client && npm install --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  },
+  "dependencies": {}
+}
