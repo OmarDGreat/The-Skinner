@@ -21,8 +21,8 @@ const findUserById = async (id) => {
 passport.use(
   new SteamStrategy(
     {
-      returnURL: 'https://the-skinner-backend-i0vvdrtpt-omardgreats-projects.vercel.app/auth/steam/return',
-      realm: 'https://the-skinner-backend-i0vvdrtpt-omardgreats-projects.vercel.app',
+      returnURL: 'https://the-skinner-backend-ib0xlrqk0-omardgreats-projects.vercel.app/auth/steam/return',
+      realm: 'https://the-skinner-backend-ib0xlrqk0-omardgreats-projects.vercel.app',
       apiKey: process.env.STEAM_API_KEY,
     },
     async (identifier, profile, done) => {
