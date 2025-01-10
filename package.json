@@ -4,10 +4,10 @@
   "private": true,
   "description": "A project for viewing and managing Steam skins and inventory",
   "scripts": {
-    "dev": "concurrently \"npm run dev --prefix client\" \"npm run dev --prefix server\"",
-    "start": "npm run start --prefix server",
+    "dev": "concurrently \"npm run dev --prefix client\" \"npm run dev --prefix api\"",
+    "start": "npm run start --prefix api",
     "build": "npm run build --prefix client",
-    "install-all": "npm install --prefix client && npm install --prefix server"
+    "install-all": "npm install --prefix client && npm install --prefix api"
   },
   "devDependencies": {
     "concurrently": "^8.0.1"
