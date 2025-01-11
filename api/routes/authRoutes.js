@@ -26,11 +26,11 @@ router.get(
     console.log('Session data after login:', req.session);
 
     // Redirect user to the frontend profile page after successful authentication
-    // res.redirect('https://localhost:5173/profile'); // Adjust this to your frontend URL
-    res.json({
-      user: req.user, // User details from Steam
-      session: req.session, // Session details
-    });
+    res.redirect('https://localhost:5173/profile'); // Adjust this to your frontend URL
+    // res.json({
+    //   user: req.user, // User details from Steam
+    //   session: req.session, // Session details
+    // });
   }
 );
 
