@@ -3,7 +3,7 @@ import cors from 'cors';
 const allowedOrigins = [
   'http://localhost:5173', // Local HTTP frontend
   'https://localhost:5173', // Local HTTPS frontend
-  'https://your-frontend-domain.vercel.app' // Replace with your deployed frontend domain
+  'the-skinner.vercel.app' // Replace with your deployed frontend domain
 ];
 
 const corsConfig = cors({
