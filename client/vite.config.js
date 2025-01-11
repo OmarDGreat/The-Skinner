@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import mkcert from 'vite-plugin-mkcert'
+import mkcert from 'vite-plugin-mkcert';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
@@ -12,5 +12,8 @@ export default defineConfig({
     alias: {
       '@': '/src',
     },
+  },
+  build: {
+    outDir: 'dist', // Ensure build output is placed in the 'dist' folder
   },
 });
