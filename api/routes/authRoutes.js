@@ -34,17 +34,6 @@ router.get(
   }
 );
 
-// router.get('/auth/steam/return', (req, res) => {
-//   req.session.passport = {
-//     user: {
-//       steamId: 'mockSteamId',
-//       displayName: 'Mock User',
-//       photos: [],
-//     },
-//   };
-//   res.redirect('https://localhost:5173/profile');
-// });
-
 
 // Add a utility route to check session data (optional)
 router.get('/auth/session', (req, res) => {

@@ -6,7 +6,7 @@ const ProfilePage = () => {
 
   useEffect(() => {
     // Use import.meta.env for environment variables in Vite
-    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5173';
+    const apiBaseUrl = import.meta.env.VITE_API_BASE_URL;
 
     fetch(`${apiBaseUrl}/api/profile`, {
       method: 'GET',
