@@ -23,8 +23,8 @@ app.use(passport.session());
 app.use(express.urlencoded({ extended: true }));
 
 // Routes
-app.use(authRoutes);
-app.use('/api', apiRoutes);
+app.use('/auth', authRoutes); // Authentication routes
+app.use('/api', apiRoutes);  // API routes
 
 // Export the app for Vercel serverless functions
 export default app;

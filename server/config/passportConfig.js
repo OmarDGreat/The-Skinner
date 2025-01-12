@@ -44,28 +44,31 @@ passport.use(
   )
 );
 
-// Serialize user into the session
 passport.serializeUser((steamId, done) => {
   if (!steamId) {
+    console.error('Error: No Steam ID provided for serialization');
     done(new Error('No Steam ID provided for serialization'));
   } else {
+    console.log('Successfully serialized Steam ID:', steamId);
     done(null, steamId);
-    console.log('Serializing user ID:', steamId);
   }
 });
 
-// Deserialize user from the session
 passport.deserializeUser(async (steamId, done) => {
+  console.log('Attempting to deserialize Steam ID:', steamId);
   try {
     const user = await findUserById(steamId);
     if (!user) {
-      throw new Error(`User with Steam ID ${steamId} not found`);
+      console.error('Error: User not found during deserialization:', steamId);
+      return done(new Error(`User with Steam ID ${steamId} not found`));
     }
+    console.log('Successfully deserialized user:', user);
     done(null, user);
   } catch (error) {
     console.error('Error during deserialization:', error);
     done(error);
   }
 });
+
 
 export default passport;

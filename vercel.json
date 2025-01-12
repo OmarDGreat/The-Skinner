@@ -1,0 +1,33 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "client/package.json",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "client/dist" }
+      },
+      {
+        "src": "server/server.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "server/server.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "client/dist/$1"
+      }
+    ],
+    "env": {
+      "VITE_API_BASE_URL": "/api",
+      "STEAM_API_KEY": "@steam_api_key",
+      "SESSION_SECRET": "@session_secret",
+      "MONGO_URI": "@mongo_uri",
+      "STEAM_REALM": "@steam_realm",
+      "STEAM_RETURN_URL": "@steam_return_url"
+    }
+  }
+  
