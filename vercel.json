@@ -1,34 +1,25 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "client/package.json",
-        "use": "@vercel/static-build",
-        "config": { "distDir": "client/dist" }
-      },
-      {
-        "src": "server/server.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "server/server.js"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "client/dist/$1"
-      }
-    ],
-    "env": {
-      "VITE_API_BASE_URL": "/api",
-      "STEAM_API_KEY": "AF82872DDC3093FF0005F29C4714CB56",
-      "SESSION_SECRET": "default-secret",
-      "MONGO_URI": "OmarD:Lichking@cluster0.8oeeh.mongodb.net",
-      "STEAM_REALM": "the-skinner-front-back.vercel.app",
-      "STEAM_RETURN_URL": "the-skinner-front-back.vercel.app/auth/steam/return"
-
+  "version": 2,
+  "builds": [
+    {
+      "src": "client/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "client/dist" }
+    },
+    {
+      "src": "server/server.js",
+      "use": "@vercel/node"
     }
-  }
-  
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "server/server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "client/dist/$1"
+    }
+  ]
+
+}
