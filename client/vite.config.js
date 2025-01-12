@@ -1,19 +1,11 @@
 import { defineConfig } from 'vite';
-import mkcert from 'vite-plugin-mkcert';
 import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  plugins: [react(), mkcert()],
+  plugins: [react()],
   server: {
-    https: true, // Enable HTTPS
-    port: 5173,
-  },
-  resolve: {
-    alias: {
-      '@': '/src',
+    proxy: {
+      '/api': 'http://localhost:5000',
     },
-  },
-  build: {
-    outDir: 'dist', // Ensure build output is placed in the 'dist' folder
   },
 });

@@ -8,6 +8,8 @@ import authRoutes from './routes/authRoutes.js';
 import apiRoutes from './routes/apiRoutes.js';
 import connectDB from './config/connectDB.js';
 
+const PORT = process.env.PORT || 5000;
+
 dotenv.config();
 connectDB(); // Connect to MongoDB
 
@@ -25,6 +27,10 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use('/auth', authRoutes); // Authentication routes
 app.use('/api', apiRoutes);  // API routes
+
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
 
 // Export the app for Vercel serverless functions
 export default app;
