@@ -23,11 +23,12 @@
     ],
     "env": {
       "VITE_API_BASE_URL": "/api",
-      "STEAM_API_KEY": "@steam_api_key",
-      "SESSION_SECRET": "@session_secret",
-      "MONGO_URI": "@mongo_uri",
-      "STEAM_REALM": "@steam_realm",
-      "STEAM_RETURN_URL": "@steam_return_url"
+      "STEAM_API_KEY": "AF82872DDC3093FF0005F29C4714CB56",
+      "SESSION_SECRET": "default-secret",
+      "MONGO_URI": "OmarD:Lichking@cluster0.8oeeh.mongodb.net",
+      "STEAM_REALM": "the-skinner-front-back.vercel.app",
+      "STEAM_RETURN_URL": "the-skinner-front-back.vercel.app/auth/steam/return"
+
     }
   }
   
