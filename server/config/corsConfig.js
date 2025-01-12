@@ -1,8 +1,11 @@
 import cors from 'cors';
 
 const corsConfig = cors({
-  origin: process.env.FRONTEND_URL || 'http://localhost:5173', // Use environment variable for the frontend URL
-  credentials: true, // Allow credentials (cookies)
+  origin: [
+    'the-skinner-front-back.vercel.app', // Replace with your frontend's domain
+    'http://localhost:5173' // For local development
+  ],
+  credentials: true, // Allow cookies and headers like Authorization
 });
 
 export default corsConfig;
